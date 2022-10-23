@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firebasecloud.firecrud.DataStoreRegisterActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:text="Rellena el formulario"
+        android:layout_margin="10dp"
+       />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Nombre(s)"/>
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Paterno"/>
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Materno"/>
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="number"
+        android:hint="Edad"/>
+    <RadioGroup
+        android:id="@+id/groupGender"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/maleSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masculino"/>
+        <RadioButton
+            android:id="@+id/femaleSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Femenino"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/fireSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar registro"
+        android:layout_marginHorizontal="30dp"/>
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:layout_marginHorizontal="30dp"/>
+
+</LinearLayout>
