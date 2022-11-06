@@ -1,5 +1,6 @@
 package mx.edu.cloudservices.firebasecloud.firecrud
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -69,6 +70,6 @@ class DataStoreListActivity : AppCompatActivity() , UserAdapter.Events{
     }
 
     override fun onItemClick(element: User) {
-
+        startActivity(Intent())
     }
 }

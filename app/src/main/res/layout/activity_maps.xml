@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".mapas.MapsActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-27dp" />
+
+    <ImageView
+        android:id="@+id/marker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/google_marker"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.498"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="@+id/map"
+        map:layout_constraintVertical_bias="0.458" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="129dp"
+        android:layout_height="44dp"
+        android:text="Buscar"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.272"
+        map:layout_constraintStart_toEndOf="@+id/customCoords"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.148" />
+
+    <EditText
+        android:id="@+id/customCoords"
+        android:layout_width="244dp"
+        android:layout_height="43dp"
+        android:hint="Location (Lat, Lon)"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.149"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

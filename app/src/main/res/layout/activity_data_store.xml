@@ -29,4 +29,23 @@
         android:layout_height="wrap_content"
         android:text="Consulta única"
         android:layout_margin="14dp"/>
+
+    <Button
+        android:id="@+id/session"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sesiones"
+        android:layout_margin="14dp"/>
+    <Button
+        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="mapas"
+        android:layout_margin="14dp"/>
+    <Button
+        android:id="@+id/authPractice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="autenticación"
+        android:layout_margin="14dp"/>
 </LinearLayout>

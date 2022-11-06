@@ -7,7 +7,11 @@
         <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_data_store_detail.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_data_store_list.xml" value="0.25" />
         <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_data_store_register.xml" value="0.33" />
+        <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_login_auth.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_login_firebase.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_maps.xml" value="0.40764331210191085" />
+        <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/activity_welcome_auth.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/CA3/AndroidStudioProjects/cloudservices/app/src/main/res/layout/item_datastore.xml" value="0.36666666666666664" />
       </map>
     </option>
