@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".InitConfigActivity"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,6 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudServices"
         tools:targetApi="31">
+        <activity
+            android:name=".InitConfigActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".practiceAuth.WelcomeAuthActivity"
             android:exported="false" />
@@ -36,7 +44,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="<TOKEN>" />
+            android:value="AIzaSyBm4Qsw8Fjx5aXQNWq3xvPT2GktMpPmq3M" />
 
         <activity
             android:name=".mapas.MapsActivity"

@@ -1,6 +1,7 @@
 package mx.edu.cloudservices.practiceAuth
 
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +12,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import mx.edu.cloudservices.InitConfigActivity
 import mx.edu.cloudservices.databinding.ActivityLoginAuthBinding
 import mx.edu.cloudservices.databinding.ActivityLoginFirebaseBinding
 import mx.edu.cloudservices.databinding.ActivityMapsBinding
@@ -36,7 +38,12 @@ class LoginAuthActivity : AppCompatActivity() {
                 .addOnCompleteListener {
                     if(it.isSuccessful){
                         //Redireccionar a WelcomeAuth pasandole la sesión
-                        Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_SHORT).show()
+                        var email  = it.getResult().user?.email
+                        Toast.makeText(this, "Iniciado sesión correctamente ${email}", Toast.LENGTH_SHORT).show()
+                        if (email != null) {
+                            InitConfigActivity.shared.saveUser(email)
+                        }
+                        startActivity(Intent(this, WelcomeAuthActivity::class.java))
                     }else{
                         Toast.makeText(this, "[Error]: ${it.exception?.message}", Toast.LENGTH_SHORT).show()
                     }
@@ -63,7 +70,13 @@ class LoginAuthActivity : AppCompatActivity() {
                 .addOnCompleteListener {
                     if(it.isSuccessful){
                         //Redireccionar a WelcomeAuth pasandole la sesión
-                        Toast.makeText(this, "${cuenta.displayName}", Toast.LENGTH_SHORT).show()
+                        var email  = it.getResult().user?.email
+                        Toast.makeText(this, "Iniciado sesión correctamente ${email}", Toast.LENGTH_SHORT).show()
+                        if (email != null) {
+                            InitConfigActivity.shared.saveUser(email)
+                        }
+                        startActivity(Intent(this, WelcomeAuthActivity::class.java))
+                        finish()
                     }else{
                         Toast.makeText(this, "[Error]: ${it.exception?.message}", Toast.LENGTH_SHORT).show()
                     }

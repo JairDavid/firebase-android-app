@@ -83,7 +83,8 @@ class LoginFirebaseActivity : AppCompatActivity() {
 
 
     }
-    val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+    private val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        System.out.println(it.resultCode)
         if(it.resultCode == Activity.RESULT_OK){
             val tarea = GoogleSignIn.getSignedInAccountFromIntent(it.data)
 

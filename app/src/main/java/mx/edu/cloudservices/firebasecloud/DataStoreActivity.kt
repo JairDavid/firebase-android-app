@@ -8,6 +8,7 @@ import mx.edu.cloudservices.databinding.ActivityDataStoreBinding
 import mx.edu.cloudservices.firebasecloud.firecrud.DataStoreListActivity
 import mx.edu.cloudservices.firebasecloud.firecrud.DataStoreRegisterActivity
 import mx.edu.cloudservices.mapas.MapsActivity
+import mx.edu.cloudservices.practiceAuth.LoginAuthActivity
 
 class DataStoreActivity : AppCompatActivity() {
     lateinit var binding: ActivityDataStoreBinding
@@ -34,6 +35,9 @@ class DataStoreActivity : AppCompatActivity() {
             startActivity(Intent(this, MapsActivity::class.java))
         }
 
+        binding.authPractice.setOnClickListener {
+            startActivity(Intent(this, LoginAuthActivity::class.java))
+        }
 
     }
 }
