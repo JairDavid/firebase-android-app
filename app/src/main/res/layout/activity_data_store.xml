@@ -48,4 +48,10 @@
         android:layout_height="wrap_content"
         android:text="autenticación"
         android:layout_margin="14dp"/>
+    <Button
+        android:id="@+id/chatRealtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:layout_margin="14dp"/>
 </LinearLayout>

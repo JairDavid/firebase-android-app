@@ -9,6 +9,7 @@ import mx.edu.cloudservices.firebasecloud.firecrud.DataStoreListActivity
 import mx.edu.cloudservices.firebasecloud.firecrud.DataStoreRegisterActivity
 import mx.edu.cloudservices.mapas.MapsActivity
 import mx.edu.cloudservices.practiceAuth.LoginAuthActivity
+import mx.edu.cloudservices.realtimechat.ChatActivity
 
 class DataStoreActivity : AppCompatActivity() {
     lateinit var binding: ActivityDataStoreBinding
@@ -37,6 +38,10 @@ class DataStoreActivity : AppCompatActivity() {
 
         binding.authPractice.setOnClickListener {
             startActivity(Intent(this, LoginAuthActivity::class.java))
+        }
+
+        binding.chatRealtime.setOnClickListener {
+            startActivity(Intent(this, ChatActivity::class.java))
         }
 
     }
