@@ -21,37 +21,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrar nuevo"
-        android:layout_margin="14dp"/>
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/fireQuery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Consulta única"
-        android:layout_margin="14dp"/>
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/session"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="sesiones"
-        android:layout_margin="14dp"/>
+        android:layout_margin="5dp"/>
     <Button
         android:id="@+id/maps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="mapas"
-        android:layout_margin="14dp"/>
+        android:layout_margin="5dp"/>
     <Button
         android:id="@+id/authPractice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="autenticación"
-        android:layout_margin="14dp"/>
+        android:layout_margin="5dp"/>
     <Button
         android:id="@+id/chatRealtime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Chat"
-        android:layout_margin="14dp"/>
+        android:layout_margin="5dp"/>
+    <Button
+        android:id="@+id/gameRealtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game"
+        android:layout_margin="5dp"/>
 </LinearLayout>

@@ -31,9 +31,11 @@ class UserAdapter(private val events: UserAdapter.Events, contex:Context):ListAd
         fun bind(item: User, position: Int) {
 
             binding.itemName.text = item.name
+
             binding.itemDeleteBtn.setOnClickListener {
                 this@UserAdapter.events.onItemDelete(item, position)
             }
+
             binding.itemName.setOnClickListener{
                 this@UserAdapter.events.onItemClick(item)
             }

@@ -70,6 +70,6 @@ class DataStoreListActivity : AppCompatActivity() , UserAdapter.Events{
     }
 
     override fun onItemClick(element: User) {
-        startActivity(Intent())
+        startActivity(Intent(this, DataStoreDetailActivity::class.java).putExtra("user", element))
     }
 }

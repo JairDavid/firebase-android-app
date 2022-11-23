@@ -9,6 +9,7 @@ import mx.edu.cloudservices.firebasecloud.firecrud.DataStoreListActivity
 import mx.edu.cloudservices.firebasecloud.firecrud.DataStoreRegisterActivity
 import mx.edu.cloudservices.mapas.MapsActivity
 import mx.edu.cloudservices.practiceAuth.LoginAuthActivity
+import mx.edu.cloudservices.realtimeGame.GameActivity
 import mx.edu.cloudservices.realtimechat.ChatActivity
 
 class DataStoreActivity : AppCompatActivity() {
@@ -42,6 +43,10 @@ class DataStoreActivity : AppCompatActivity() {
 
         binding.chatRealtime.setOnClickListener {
             startActivity(Intent(this, ChatActivity::class.java))
+        }
+
+        binding.gameRealtime.setOnClickListener {
+            startActivity(Intent(this, GameActivity::class.java))
         }
 
     }
