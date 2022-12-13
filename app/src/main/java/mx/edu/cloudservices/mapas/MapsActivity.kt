@@ -10,13 +10,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 import mx.edu.cloudservices.R
 import mx.edu.cloudservices.databinding.ActivityMapsBinding
 import java.util.*
@@ -132,19 +132,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun searchDirection(dir:String){
         try{
-
+            var position  = LatLng(0.0, 0.0)
+            var geocoder = Geocoder(this)
+            var directions  = geocoder.getFromLocationName(dir, 1)
+            if(!directions.isNullOrEmpty()){
+                var direction = directions[0]
+                position = LatLng(direction.latitude, direction.longitude)
+                mMap.addMarker(MarkerOptions().position(position))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 10f))
+            }
         }catch (e:Exception){
             Log.d("ERROR", "${e}")
         }
-        var position  = LatLng(0.0, 0.0)
-        var geocoder = Geocoder(this)
-        var directions  = geocoder.getFromLocationName(dir, 1)
-        if(!directions.isNullOrEmpty()){
-            var direction = directions[0]
-            position = LatLng(direction.latitude, direction.longitude)
-            mMap.addMarker(MarkerOptions().position(position))
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 10f))
-        }
+
     }
 
     fun calcularDistancia(){
@@ -168,6 +168,35 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     "${destino.latitude},${destino.longitude}")
         )
         startActivity(intent)
+
+    }
+
+    /**
+     * Muestra una ruta con puntos trazados en un mapa
+     * */
+    fun buildRoute() {
+        // Construye el recorrido
+        var polylineOptions = PolylineOptions()
+            // Dirección desde una docencia hasta el CECyTE
+            .add(LatLng(18.851234, -99.200416))
+            .add(LatLng(18.851191, -99.200166))
+            .add(LatLng(18.851049, -99.199987))
+            .add(LatLng(18.851023, -99.199834))
+            .add(LatLng(18.850409, -99.199877))
+            .add(LatLng(18.850224, -99.199764))
+            .add(LatLng(18.849947, -99.199794))
+            .add(LatLng(18.849299, -99.200255))
+            .add(LatLng(18.848489, -99.199637))
+            .width(10f)
+            .color(ContextCompat.getColor(this, R.color.teal_700))
+
+        var polyline = mMap.addPolyline(polylineOptions)
+        // Dale un estilo a la linea
+        var patron = listOf(
+            Dot(), Gap(10f), Dash(30f), Gap(10f)
+        )
+
+        polyline.pattern = patron
 
     }
 
