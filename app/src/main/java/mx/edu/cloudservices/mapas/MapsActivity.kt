@@ -3,7 +3,6 @@ package mx.edu.cloudservices.mapas
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Camera
 import android.location.Geocoder
 import android.location.Location
 import android.net.Uri
@@ -21,7 +20,6 @@ import com.google.android.gms.maps.model.MarkerOptions
 import mx.edu.cloudservices.R
 import mx.edu.cloudservices.databinding.ActivityMapsBinding
 import java.util.*
-import java.util.logging.Logger
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 

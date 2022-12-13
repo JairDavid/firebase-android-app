@@ -11,6 +11,7 @@ import mx.edu.cloudservices.databinding.ActivityGameBinding
 import mx.edu.cloudservices.realtimechat.MessageModel
 
 class GameActivity : AppCompatActivity() {
+
     lateinit var binding:ActivityGameBinding
     var gameMovements = mutableListOf<GameModel>()
     var players = mutableListOf<String>()
@@ -31,9 +32,6 @@ class GameActivity : AppCompatActivity() {
         binding.jugadorO.setOnClickListener {
             setPlayerFirebase("O")
         }
-
-
-
 
 
         binding.c1.setOnClickListener {
@@ -209,6 +207,7 @@ class GameActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "No existente", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 
     fun fetchMovements(){
@@ -234,8 +233,6 @@ class GameActivity : AppCompatActivity() {
                 override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
                     val casilla = snapshot.child("casilla").value.toString()
                     val turno = snapshot.child("turno").value.toString()
-
-
 
                     if (turno != currentPlayer){
 
@@ -281,7 +278,7 @@ class GameActivity : AppCompatActivity() {
                                 Toast.makeText(applicationContext, "No existente", Toast.LENGTH_SHORT).show()
                             }
                         }
-                        winner()
+
                     }
                 }
                 override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
@@ -317,7 +314,7 @@ class GameActivity : AppCompatActivity() {
         if(binding.c2.text.equals("X") && binding.c5.text.equals("X") && binding.c8.equals("X")){
             Toast.makeText(applicationContext, "Gano el jugador X!!!!", Toast.LENGTH_SHORT).show()
         }
-        if(binding.c3.text.equals("X") && binding.c6.text.equals("X") && binding.c8.equals("X")){
+        if(binding.c3.text.equals("X") && binding.c6.text.equals("X") && binding.c9.equals("X")){
             Toast.makeText(applicationContext, "Gano el jugador X!!!!", Toast.LENGTH_SHORT).show()
         }
 
@@ -326,6 +323,40 @@ class GameActivity : AppCompatActivity() {
         }
         if(binding.c3.text.equals("X") && binding.c5.text.equals("X") && binding.c7.equals("X")){
             Toast.makeText(applicationContext, "Gano el jugador X!!!!", Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
+
+
+
+        if(binding.c1.text.equals("O") && binding.c2.text.equals("O") && binding.c3.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+        if(binding.c4.text.equals("O") && binding.c5.text.equals("O") && binding.c6.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+        if(binding.c7.text.equals("O") && binding.c8.text.equals("O") && binding.c9.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+
+
+        if(binding.c1.text.equals("O") && binding.c4.text.equals("O") && binding.c7.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+        if(binding.c2.text.equals("O") && binding.c5.text.equals("O") && binding.c8.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+        if(binding.c3.text.equals("O") && binding.c6.text.equals("O") && binding.c9.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+
+        if(binding.c1.text.equals("O") && binding.c5.text.equals("O") && binding.c9.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
+        }
+        if(binding.c3.text.equals("O") && binding.c5.text.equals("O") && binding.c7.equals("O")){
+            Toast.makeText(applicationContext, "Gano el jugador O!!!!", Toast.LENGTH_SHORT).show()
         }
 
 

@@ -2,13 +2,11 @@ package mx.edu.cloudservices.realtimechat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
 import android.widget.Toast
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
 import mx.edu.cloudservices.databinding.ActivityChatBinding
 
 class ChatActivity : AppCompatActivity() {
